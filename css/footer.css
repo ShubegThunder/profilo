@@ -1,0 +1,179 @@
+/* footer.css - Clean and minimal footer styles */
+
+/* Footer Base Styles */
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 4px solid #3498db;
+  width: 100%;
+}
+
+/* Footer Container */
+footer > div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Footer Content */
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #bdc3c7;
+}
+
+/* Copyright */
+.copyright {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+/* Tech Badge */
+.tech-badge {
+  display: inline-block;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  footer {
+    padding: 1.5rem 1rem;
+  }
+}
+/* footer-fullwidth.css - Footer that spans full width */
+
+/* Remove any body margin/padding that might be restricting footer */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Make footer span full width */
+footer {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #1a252f 0%, #0d1419 100%);
+  color: #ecf0f1;
+  border-top: 4px solid #3498db;
+}
+
+/* Remove any max-width constraints from footer container */
+footer > div {
+  max-width: 100% !important;
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+/* Ensure content is still centered within full-width footer */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Update existing footer.css classes to work with full width */
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #bdc3c7;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #1abc9c;
+  text-decoration: underline;
+}
+
+.tech-badge {
+  display: inline-block;
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+/* Ensure no horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Make sure all sections above footer don't constrain width */
+section {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Update contact section to match full width if needed */
+#contact {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  footer {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  footer > div {
+    padding: 0 0.5rem;
+  }
+}

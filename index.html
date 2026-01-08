@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubeg Partap Singh Bangar | Young Web Developer Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/skills-cards.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/contact-card-position.css">
+    <style>
+        /* Quick fixes for common issues */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        section {
+            padding: 4rem 2rem;
+        }
+        
+        /* About section centered alignment */
+        #about {
+            background-color: #ffffff;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .about-header h2 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            text-align: center;
+        }
+        
+        .about-text h3 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .about-text p {
+            color: #5d6d7e;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* About stats */
+        .about-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.2rem 2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3498db;
+            margin-bottom: 0.3rem;
+        }
+        
+        .stat-label {
+            color: #5d6d7e;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* About image */
+        .about-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        
+        .young-coder-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: linear-gradient(135deg, #3498db, #2ecc71);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.2);
+        }
+        
+        .young-coder-img::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 2px solid white;
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+        
+        .young-coder-img .icon {
+            font-size: 5rem;
+            color: white;
+            opacity: 0.9;
+            font-weight: bold;
+        }
+        
+        /* Contact content styling */
+        .contact-content {
+            color: #ecf0f1;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Projects styling */
+        .project-content p {
+            color: #5d6d7e;
+            line-height: 1.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 1.5rem;
+            }
+            
+            .about-header h2 {
+                font-size: 2rem;
+            }
+            
+            .about-text h3 {
+                font-size: 1.6rem;
+            }
+            
+            .stat-item {
+                padding: 1rem 1.5rem;
+                min-width: 120px;
+            }
+            
+            .stat-number {
+                font-size: 1.6rem;
+            }
+            
+            .young-coder-img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .young-coder-img .icon {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            section {
+                padding: 2.5rem 1rem;
+            }
+            
+            .about-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text h3 {
+                font-size: 1.4rem;
+            }
+            
+            .about-text p {
+                font-size: 1rem;
+            }
+            
+            .about-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                width: 100%;
+                max-width: 200px;
+            }
+            
+            .young-coder-img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .young-coder-img .icon {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="layout-stacked-form-top">
+    <!-- Header with Navigation -->
+    <header>
+        <div>
+            <h1>Shubeg Partap Singh Bangar</h1>
+            <p>Full Stack Web Developer</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <h2>Building Digital Experiences That Matter</h2>
+            <p>I create responsive, accessible, and user-friendly web applications with modern technologies and best practices.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="hero-image-container">
+                <div class="hero-image-inner">
+                    <!-- Developer image -->
+                    <img src="img/developer.png" alt="Shubeg Partap Singh Bangar - Web Developer" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <div class="about-header">
+                <h2>About Me</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Young Developer, Big Dreams</h3>
+                    <p>Hi! I'm Shubeg Partap Singh Bangar, a 12-year-old passionate web developer from Patiala, Punjab. I started coding at age 10 and have been passionately building websites and web applications ever since.</p>
+                    <p>Over the past two years, I've dedicated myself to learning web development through online courses, tutorials, and hands-on projects. I've mastered HTML, CSS, JavaScript, and various frameworks to create functional and beautiful websites.</p>
+                    <p>I believe age is just a number when it comes to passion and dedication. My goal is to create websites that are not only visually appealing but also solve real problems for users.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Years Old</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Coding</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">7+</span>
+                            <span class="stat-label">Live Projects</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="young-coder-img">
+                        <div class="icon">{ }</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        
+        <div class="skills-grid">
+            <!-- Frontend Card -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <div class="card-icon">⚡</div>
+                    <h3>Frontend</h3>
+                </div>
+                
+                <ul class="card-skills">
+                    <li><span class="skill-dot"></span>HTML5 & CSS3</li>
+                    <li><span class="skill-dot"></span>JavaScript (ES6+)</li>
+                    <li><span class="skill-dot"></span>Responsive Design</li>
+                    <li><span class="skill-dot"></span>CSS Flexbox & Grid</li>
+                    <li><span class="skill-dot"></span>Bootstrap</li>
+                    <li><span class="skill-dot"></span>DOM Manipulation</li>
+                </ul>
+            </div>
+            
+            <!-- Tools Card -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Tools & Deployment</h3>
+                </div>
+                
+                <ul class="card-skills">
+                    <li><span class="skill-dot"></span>Git & GitHub</li>
+                    <li><span class="skill-dot"></span>GitHub Pages</li>
+                    <li><span class="skill-dot"></span>VS Code</li>
+                    <li><span class="skill-dot"></span>Chrome DevTools</li>
+                    <li><span class="skill-dot"></span>Responsive Testing</li>
+                    <li><span class="skill-dot"></span>Cross-browser Compatibility</li>
+                </ul>
+            </div>
+            
+            <!-- Design Card -->
+            <div class="skill-card">
+                <div class="card-header">
+                    <div class="card-icon">🎨</div>
+                    <h3>Design & UX</h3>
+                </div>
+                
+                <ul class="card-skills">
+                    <li><span class="skill-dot"></span>UI/UX Design Principles</li>
+                    <li><span class="skill-dot"></span>Color Theory</li>
+                    <li><span class="skill-dot"></span>Typography</li>
+                    <li><span class="skill-dot"></span>Wireframing</li>
+                    <li><span class="skill-dot"></span>Mobile-First Design</li>
+                    <li><span class="skill-dot"></span>Accessibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- Project 1: Harry Potter Central -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Harry Potter Central</h3>
+                    <p class="project-description">A comprehensive information website about the Harry Potter universe featuring characters, spells, houses, and magical locations with interactive elements.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShubegThunder/harrypotter" target="_blank" class="project-link link-primary">GitHub</a>
+                        <a href="https://shubegthunder.github.io/harrypotter/" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2: National Parks of India -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">National Parks of India</h3>
+                    <p class="project-description">An informative website showcasing India's beautiful national parks with details about wildlife, geography, and conservation efforts.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShubegThunder/National-Parks-of-India" target="_blank" class="project-link link-primary">GitHub</a>
+                        <a href="https://shubegthunder.github.io/National-Parks-of-India/" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3: National Parks of USA -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">National Parks of USA</h3>
+                    <p class="project-description">A website featuring America's famous national parks with information about their history, attractions, and visitor information.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShubegThunder/National-Parks-of-USA" target="_blank" class="project-link link-primary">GitHub</a>
+                        <a href="https://shubegthunder.github.io/National-Parks-of-USA/" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 4: Famous Monuments of India -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Famous Monuments of India</h3>
+                    <p class="project-description">Showcasing India's rich cultural heritage through its famous historical monuments with detailed information and images.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShubegThunder/famous_monuments_of_india" target="_blank" class="project-link link-primary">GitHub</a>
+                        <a href="https://shubegthunder.github.io/famous_monuments_of_india/" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 5: Dinosaurs -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Dinosaurs Encyclopedia</h3>
+                    <p class="project-description">An educational website about different dinosaur species, their characteristics, habitats, and the prehistoric world they lived in.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ShubegThunder/dino" target="_blank" class="project-link link-primary">GitHub</a>
+                        <a href="https://shubegthunder.github.io/dino/" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 6: Ashwasabhavan -->
+            <div class="project-card">
+                <div class="project-image">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ashwasabhavan</h3>
+                    <p class="project-description">A website about horse care and stable management, providing information about horse breeds, care tips, and facilities.</p>
+                    <div class="technologies">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="http:/ashwasabhavan.org" target="_blank" class="project-link link-secondary">Live Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <!-- Contact Header -->
+            <div class="contact-header">
+                <h2>Get In Touch</h2>
+                <p class="contact-content">I'm currently available for website creation projects and collaborations. Let's discuss how we can work together to build something amazing!</p>
+            </div>
+            
+            <!-- Contact Layout -->
+            <div class="contact-layout">
+                <!-- Contact Info Section -->
+                <div class="contact-info-section">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-info-items">
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a class="contact-content" href="mailto:shubegbangar@gmail.com">shubegbangar@gmail.com</a>
+                                <p class="contact-content">Response within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p class="contact-content">Patiala, Punjab, India</p>
+                                <p class="contact-content">Available for website creation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">👨‍💻</div>
+                            <div class="info-content">
+                                <h4>GitHub</h4>
+                                <a class="contact-content" href="https://github.com/ShubegThunder" target="_blank">github.com/ShubegThunder</a>
+                                <p class="contact-content">View all my projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="contact-social">
+                        <h4></h4>
+                        <div class="social-links">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form Section -->
+                <div class="contact-form-section">
+                    <h3>Send a Message</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="What is this regarding?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or inquiry..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        
+                        <div class="form-message success" id="successMessage">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                        
+                        <div class="form-message error" id="errorMessage">
+                            Something went wrong. Please try again.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; 2026 Shubeg Partap Singh Bangar. All rights reserved.</p>
+            
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <p>Built with passion by a 12-year-old developer</p>
+            <div class="tech-badge">Young Web Developer</div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Initially hide messages
+            successMessage.style.display = 'none';
+            errorMessage.style.display = 'none';
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                
+                // Basic validation
+                if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
+                    showMessage(errorMessage, 'Please fill in all required fields.');
+                    return;
+                }
+                
+                if (!isValidEmail(data.email)) {
+                    showMessage(errorMessage, 'Please enter a valid email address.');
+                    return;
+                }
+                
+                // Show loading state
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    console.log('Form submitted:', data);
+                    
+                    // Show success message
+                    showMessage(successMessage, 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Auto-hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                }, 1500);
+            });
+            
+            function showMessage(element, text) {
+                // Hide both messages first
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+                
+                // Show selected message
+                element.textContent = text;
+                element.style.display = 'block';
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
